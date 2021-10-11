@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="fa/css/all.min.css" />
+    <link rel="stylesheet" href="css/web-font.css" />
+    <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024.0px)" />
+    <link rel="stylesheet" href="css/style-m.css" media="screen and (max-width: 1023.9px)" />
     <title>Music - Apple (KR)</title>
   </head>
   <body>
@@ -84,13 +88,63 @@
     <main id="main">
       <section id="main-visual">
         <h2 class="ir-hidden">apple music</h2>
-        <video src="./img/main-visual00.mp4" autoplay></video>
-        <img src="./img/icon_apple_music.png" alt="apple music" />
-        <p>음악이 삶이 되는 곳.</p>
-        <a href="#">무료 체험하기*</a>
-        <a href="#">더 알아보기 ></a>
+        <video src="./img/main-visual00.mp4" autoplay muted loop></video>
+        <a href="#" class="play"><img src="./img/play_icon_large.png" alt="play" /><img src="./img/play-buffer-pause-LMS-01-jorge-1.png" alt="pause" /></a>
+        <div class="box">
+          <img src="./img/icon_apple_music.png" alt="apple music" />
+          <p>음악이 삶이 되는 곳.</p>
+          <a href="#">무료 체험하기*</a>
+          <a href="#">더 알아보기 ></a>
+        </div>
       </section>
-      <section class="gray"></section>
+      <section class="gray">
+        <ul class="">
+          <li>
+            <a href="#">고르고 골랐어요</a>
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-play-circle"><span>play</span></i>
+                </a>
+                <p>언제나 일요일</p>
+                <p>Apple Music 휴식</p>
+              </li>
+              <li>
+               <a href="#"><i class="fas fa-play-circle"><span>play</span></i>
+                </a>
+                <p>부드럽게 감싸는</p>
+                <p>Apple Music R&B</p>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-play-circle"><span>play</span></i>
+                </a>
+                <p>편안한 K-pop</p>
+                <p>Apple Music K-Pop</p>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-play-circle"><span>play</span></i>
+                </a>
+                <p>오늘의 히트곡</p>
+                <p>Apple Music</p>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-play-circle"><span>play</span></i>
+                </a>
+                <p>R&B Now</p>
+                <p>Apple Music R&B</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">오늘의 TOP 100</a>
+          </li>
+          <li>
+            <a href="#">방금 업데이트된 플레이리스트</a>
+          </li>
+          <li>
+            <a href="#">최신곡</a>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer id="footer"></footer>
   </body>
