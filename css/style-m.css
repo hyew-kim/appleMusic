@@ -17,4 +17,8 @@ i[class^="fa"] span {position: absolute; left: -9999px;}
 .pc {display: none !important;}
 br.only-pc {content: '';}
 br.only-pc::after {content: '\00a0';}
+
 /* common */
+body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ; font-size: 14px; color: #000000; letter-spacing: -0.03em; background: #ffffff;}
+
+#wrapper {min-width: 320px; max-width: 1024px; margin: 0 auto; overflow: hidden;}
