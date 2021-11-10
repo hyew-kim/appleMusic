@@ -24,44 +24,49 @@ br.only-m::after {content: '\00a0';}
 body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 14px;color: #000000;letter-spacing: -0.03em;background: #ffffff;}
 #wrapper {min-width: 1024px; overflow: hidden;}
 
-#skip-nav {background-color: rgba(0, 0, 0, 0.6); color: white; position: fixed; z-index: 10000000; line-height: 40px; width: 100%; top: 0; text-align: center; opacity: 0; transition: opacity 1s;}
-#skip-nav:focus {opacity: 1;}
+#skip-nav {background-color: rgba(0, 0, 0, 0.6); color: white; position: fixed; z-index: 10000000; line-height: 40px; width: 100%; top: -40px; text-align: center; opacity: 0; transition: top 1s;}
+#skip-nav:focus {top: 0px}
 
-#header {background: #333333; color: #ffffff; position: relative; height: 48px; width: 100%; font-size: 17px; min-width: 1024px}
-#header h1 {position: absolute; top: 50%; left: 10%; transform: translateY(-50%); font-size: 20px;}
-
-#gnb {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100; font-size: 14px; width: auto; min-width: 800px;}
+#header {background: #333333; color: #f5f5f7; position: relative; height: 44px; width: 100%; font-size: 17px; min-width: 1024px;}
+#header h1 {position: absolute; top: 50%; left: 23%; transform: translateY(-50%); font-size: 20px;}
+#header h1 > a > i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#gnb {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100; font-size: 12px; width: auto; min-width: 800px;}
 #gnb > ul > li {float: left; transition: color 0.3s}
-#gnb > ul > li + li {margin-left: 85px;}
+#gnb > ul > li + li {margin-left: 50px;}
 #gnb > ul > li > a {display: block; line-height: 45px;}
-#gnb > ul > li:hover, #gnb > ul >li:focus {color: rgba(121, 116, 116, 0.979);} 
+#header > h1:hover, #header > h1:focus, #top-menu > li:hover, #top-menu > li:focus, #gnb > ul > li:hover, #gnb > ul >li:focus {color: rgba(121, 116, 116, 0.979);} 
 
-#top-menu {position: absolute; right: 15%; top: 50%; transform: translate(0, -50%);}
-#top-menu > li {display: inline-block;}
-#top-menu > li + li {margin-left: 30px;}
+#top-menu {position: absolute; right: 23%; top: 50%; transform: translate(0, -50%); z-index: 100;}
+#top-menu > li {display: inline-block; width: 35px;}
+#top-menu > li + li {margin-left: 25px;}
+@media screen and (max-width: 1700px) {
+	#header h1 {left: 15%;}
+	#top-menu {right: 15%;}
+	#top-menu > li + li{margin-left: 12px;}
+}
 
 @media screen and (max-width: 1300px) {
 	#header h1 {left: 8%;}
-	#top-menu {right: 8%;}
-	#top-menu > li + li {margin-left: 15px;}
+	#top-menu {right: 7%;}
+	#top-menu > li + li{margin-left: 8px;}
 }
-
-#main-tab {position: relative; width: 100%; height: 130px; background: #1e1e1e; color: white;}
-#main-tab > ul {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; text-align: center;}
-#main-tab > ul > li {display: inline-block; width: calc(12.5% - 5px); position: relative; height: 130px;}
-#main-tab > ul > li + li {margin-left: 16px;}
+/*span:hover #06c;*/
+#main-tab {position: relative; width: 100%; height: 130px; color: #1d1d1f;}
+#main-tab > ul {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; text-align: center}
+#main-tab > ul > li {display: inline-block; width: calc(12.5% - 10px); position: relative; height: 130px}
+#main-tab > ul > li + li {margin-left: 20px;}
 #main-tab > ul > li > a {display: block; position: absolute; width: 100%; height: 130px; left: 50%; transform: translate(-50%, 0); transition: color 0,1s;}
 #main-tab > ul > li > a::after {position: absolute; width: 100%; height: 100%; left: 0; top: 0;}
-#main-tab > ul > li > a:focus, #main-tab > ul > li > a:hover {color:rgba(121, 116, 116, 0.979);}
+#main-tab > ul > li > a:focus, #main-tab > ul > li > a:hover {color: #06c;}
 #main-tab > ul > li:first-child > a {background: url("../img/nav-00.png") center 20px no-repeat;}
 #main-tab > ul > li:nth-child(2) > a {background: url("../img/nav-01.png") center 20px no-repeat;}
 #main-tab > ul > li:nth-child(3) > a {background: url("../img/nav-02.png") center 20px no-repeat;}
 #main-tab > ul > li:nth-child(4) > a {background: url("../img/nav-03.png") center 20px no-repeat;}
 #main-tab > ul > li:nth-child(5) > a {background: url("../img/nav-04.png") center 20px no-repeat;}
-#main-tab > ul > li:nth-child(6) > a {background: url("../img/nav-05.png") center 20px no-repeat;}
-#main-tab > ul > li:last-child > a {background: url("../img/nav-06.png") center 20px no-repeat;}
-#main-tab > ul > li > a > span {position: absolute; bottom: 25px; width: 110%; left: 50%; transform: translate(-50%, 0);} 
-
+#main-tab > ul > li:last-child > a {background: url("../img/nav-05.png") center 20px no-repeat;}
+#main-tab > ul > li > a > span {position: absolute; font-size: 12px; bottom: 30px; width: 110%; left: 50%; transform: translate(-50%, 0);} 
+#main-tab > ul > li > a > span:nth-child(2) {bottom: 15px; font-size: 11px;}
+#main-tab > ul > li > a > span:nth-child(3) {bottom: 0px; font-size: 10px; color: #bf4800}
 #main-visual {position: relative; height: calc(100vh - 175px); overflow: hidden;}
 #main-visual video {height: 100%; position: absolute; top: 0; left: 50%; transform: translate(-50%,0);}
 #main-visual video figure {background: url("../img/video_img.jpg") center center no-repeat; background-size: cover;}
@@ -93,8 +98,6 @@ ul.playlist > li.on > ul{display: block;}
 
 #items > .gray {background: url("../img/airpods_max__large.png") center center no-repeat; background-size: contain; height: 800px; box-sizing: border-box; border: 1px solid black; border-radius: 18px; position: relative;}
 #items p.link {position: absolute; bottom: 10px; left: 50%; transform: translate(-50%, 0);}
-#items .box {}
-#items .round-box{}
 
 
 
