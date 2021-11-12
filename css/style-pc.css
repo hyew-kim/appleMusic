@@ -19,9 +19,20 @@ i[class^="fa"] span {position: absolute; left: -9999px;}
 br.only-m {content: '';}
 br.only-m::after {content: '\00a0';}
 
+:root {
+	--new-color:#bf4800;
+	--gray-color:#F5F5F7;
+	--black-background-color: #1e1e1e;
+	--blue-color: #0071e3;
+	--black-element-color: #1D1D1F;
+}
+
+/*module*/
+a.round-box {display: inline-block; padding: 12px 22px; background-color: var(--blue-color); box-sizing: border-box; border: 1px solid val(--blue-color); border-radius: 24px; font-size: 14px; font-weight: 600; color: white; margin-right: 10px;}
+a.info-link {font-size: 17px; color: var(--blue-color); font-weight: 600;}
 /* common */
 
-body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 14px;color: #000000;letter-spacing: -0.03em;background: #ffffff;}
+body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 14px;color: var(--black-element-color);letter-spacing: -0.03em;background: #ffffff;}
 #wrapper {min-width: 1024px; overflow: hidden;}
 
 #skip-nav {background-color: rgba(0, 0, 0, 0.6); color: white; position: fixed; z-index: 10000000; line-height: 40px; width: 100%; top: -40px; text-align: center; opacity: 0; transition: top 1s;}
@@ -50,8 +61,8 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 	#top-menu {right: 7%;}
 	#top-menu > li + li{margin-left: 8px;}
 }
-/*span:hover #06c;*/
-#main-tab {position: relative; width: 100%; height: 130px; color: #1d1d1f;}
+
+#main-tab {position: relative; width: 100%; height: 130px;}
 #main-tab > ul {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; text-align: center}
 #main-tab > ul > li {display: inline-block; width: calc(12.5% - 10px); position: relative; height: 130px}
 #main-tab > ul > li + li {margin-left: 20px;}
@@ -66,39 +77,49 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #main-tab > ul > li:last-child > a {background: url("../img/nav-05.png") center 20px no-repeat;}
 #main-tab > ul > li > a > span {position: absolute; font-size: 12px; bottom: 30px; width: 110%; left: 50%; transform: translate(-50%, 0);} 
 #main-tab > ul > li > a > span:nth-child(2) {bottom: 15px; font-size: 11px;}
-#main-tab > ul > li > a > span:nth-child(3) {bottom: 0px; font-size: 10px; color: #bf4800}
+#main-tab > ul > li > a > span:nth-child(3) {bottom: 0px; font-size: 10px; color:var(--new-color)}
 #main-visual {position: relative; height: calc(100vh - 175px); overflow: hidden;}
 #main-visual video {height: 100%; position: absolute; top: 0; left: 50%; transform: translate(-50%,0);}
 #main-visual video figure {background: url("../img/video_img.jpg") center center no-repeat; background-size: cover;}
 
-#main .gray {background-color: #F5F5F7;}
-#main .black {background-color: #1e1e1e; color: white;}
+#main .gray {background-color: var(--gray-color);}
+#main .black {background-color: var(--black-background-color); color: white;}
 
-ul.playlist {position: relative; height: 400px; text-align: center; overflow: hidden}
-ul.playlist > li {display: inline-block; margin-top: 24px;}
-ul.playlist > li + li {margin-left: 50px;}
-ul.playlist > li > a {display: block; color: rgba(0, 0, 0, 0.2); font-size: 17px;font-weight: 800; padding: 5px 0;}
-ul.playlist > li.on > a, ul.playlist > li > a:hover {color: #FA243C; border-bottom: 1.7px solid #FA243C;}
-ul.playlist > li > ul {position: absolute; top: 100px; left: 0; width: 3500px; overflow: hidden; display: none; height: 250px;} 
-ul.playlist > li > ul > li {width: 250px; height: 100%; float: left}
-ul.playlist > li > ul > li + li {margin-left: 10px}
-ul.playlist > li > ul > li > a {display: block; width: 100%; height: 100%; background: url("../img/album00.jpg") center center no-repeat; background-size: cover; box-sizing: border-box; border: 1px solid rgba(0, 0, 0, 0.0); border-radius: 18px; position: relative;}
-ul.playlist > li:nth-child(2) > ul > li > a {background: url("../img/album01.jpg") center center no-repeat; background-size: cover;}
-ul.playlist > li:nth-child(3) > ul > li > a {background: url("../img/album02.jpg") center center no-repeat; background-size: cover;}
-ul.playlist > li:last-child > ul > li > a {background: url("../img/album03.jpg") center center no-repeat; background-size: cover;}
-ul.playlist > li > ul > li > a > span {position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); font-size: 13px; font-weight: 700; background-color: white; display: block; padding: 10px 18px; border: 1px solid white; border-radius: 20px; opacity: 0; transition: all 0.3s;}
-ul.playlist > li > ul > li > a > span > i {margin-left: 8px;}
-ul.playlist > li > ul > li > a::after {content: ''; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(0, 0, 0, 0.5); box-sizing: border-box; border: 1px solid rgba(0, 0, 0, 0.0); border-radius: 18px; opacity: 0; transition: all 0.3s;}
-ul.playlist > li > ul > li > a:hover::after {opacity: 1;}
-ul.playlist > li > ul > li > a:hover > span {opacity: 1; z-index: 10; top: 50%;}
-ul.playlist > li.on > ul{display: block;}
-#items {padding: 0 30px;}
-#items a.round-box {display: inline-block; padding: 12px 22px; background-color: #0071e3; box-sizing: border-box; border: 1px solid #0071e3; border-radius: 24px; font-size: 17px; font-weight: 600; color: white;}
-#items a.info-link {font-size: 21px; color: #0071e3; font-weight: 600;}
+#items {padding: 30px 30px 0 30px; max-width: 1580px; margin: 0px auto;}
+#items > div {border-radius: 18px; height: 680px; position: relative; border: 1px solid black}
+#items > div + div {margin-top: 30px;}
+#items div.video {overflow: hidden;}
+#items div h3 {position: absolute; width: 100%; font-size: 120px; font-weight: 600; text-align: center;top: 50%; transform: translate(0, -50%); z-index: 100;}
+#items div h3 > span {position : absolute; bottom: -30px; font-size: 21px; left: 50%; transform: translate(-50%, 0);}
+#items div > p.price {position: absolute; font-size: 21px; left: 50%; transform: translate(-50%, 0); bottom: 190px;}
+#items div.video video {width: 100%; height: 100%; object-fit: cover;} 
+#items div.video a.control {position: absolute; bottom: 30px; right: 30px; background: transparent; width: 40px; height: 40px;}
+#items div.video a.control img:first-child {display: block;}
+#items div.video a.control img+img {display: none;}
+#items div.video a.control.on img:first-child {display: none;}
+#items div.video a.control.on img+img {display: block;}
+#items p.link {position: absolute; bottom: 45px; left: 50%; transform: translate(-50%, 0); z-index: 100;}
+#items div.black p.link a.info-link {color: #ffffff;}
+#items div.black p.link a.round-box {color: var(--black-element-color); background: #ffffff;}
 
-#items > .gray {background: url("../img/airpods_max__large.png") center center no-repeat; background-size: contain; height: 800px; box-sizing: border-box; border: 1px solid black; border-radius: 18px; position: relative;}
-#items p.link {position: absolute; bottom: 10px; left: 50%; transform: translate(-50%, 0);}
-
-
-
-#footer {background: #F5F5F7;}
+#connection {padding: 150px 30px 0px 30px; background-color: var(--gray-color); overflow: hidden;}
+#connection h2 {font-size: 64px; text-align: center; font-weight: 700; line-height: 1;}
+#connection ul.slide {position: relative; margin-top: 50px; width: 2500px;height: 486px; overflow: hidden;}
+#connection ul.slide > li {position: relative; height: 100%; width: 400px; float: left; border-radius: 18px; background: #ffffff; overflow: hidden;}
+#connection ul.slide > li + li {margin-left: 20px;}
+#connection ul.slide > li > img {position: absolute; left: 50%; transform: translate(-50%, 0);}
+#connection ul.slide > li:first-child > img {top: -50px; width: 350px;}
+#connection ul.slide > li:nth-child(2) > img {top: 50%; transform: translate(-50%, -50%); width: 350px;}
+#connection ul.slide > li:nth-child(3) > img {top: 30px; width: 300px;}
+#connection ul.slide > li:last-child > img {top: 40%; transform: translate(-50%, -50%)}
+#connection ul.slide > li:nth-child(4) >p.text-img {position: absolute;top: 50%; left: 50%; transform: translate(-50%, -50%) ;background: linear-gradient(90deg,#ffa54d,#f07bc5 50%,#43aeff);-webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 38px; line-height: 1; font-weight: 700; text-align: center; width: 100%;}
+#connection ul.slide > li:last-child >p.text-img {width: 100%; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 21px; font-weight: 600; color: #555555;}
+#connection ul.slide li p.title {position: absolute; bottom: 20px; left: 40px; font-size: 22px; font-weight: 600; display: inline-block;}
+#connection ul.slide li p.desc {display: none;}
+#connection ul.slide li a.control {display: inline-block; position: absolute;bottom: 20px; right: 20px; width: 33px; height: 33px; border: 1px solid var(--black-element-color); border-radius: 50%; background: var(--black-element-color);}
+#connection ul.slide li a.control i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff;}
+#connection ul.control {height: 67px; box-sizing: border-box; position: relative; display: flex; justify-content: center; align-items: center;}
+#connection ul.control li {display: inline-block; padding: 12.5px 20px;}
+#connection ul.control li a {display: inline-block; border: 2px solid var(--black-element-color); border-radius: 50%; width: 25px; height: 25px; position: relative;}
+#connection ul.control li a i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px;}
+#footer {background:var(--gray-color);}
