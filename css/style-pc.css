@@ -30,6 +30,8 @@ br.only-m::after {content: '\00a0';}
 /*module*/
 a.round-box {display: inline-block; padding: 12px 22px; background-color: var(--blue-color); box-sizing: border-box; border: 1px solid val(--blue-color); border-radius: 24px; font-size: 14px; font-weight: 600; color: white; margin-right: 10px;}
 a.info-link {font-size: 17px; color: var(--blue-color); font-weight: 600;}
+#connection ~ section a.round-box {font-size: 10px; padding: 6px 13px;}
+#connection ~ section a.info-link {font-size: 12px;}
 /* common */
 
 body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 14px;color: var(--black-element-color);letter-spacing: -0.03em;background: #ffffff;}
@@ -85,14 +87,16 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #main .gray {background-color: var(--gray-color);}
 #main .black {background-color: var(--black-background-color); color: white;}
 
-#items {padding: 30px 30px 0 30px; max-width: 1580px; margin: 0px auto;}
-#items > div {border-radius: 18px; height: 680px; position: relative; border: 1px solid black}
+#items {padding: 30px; max-width: 1580px; margin: 0px auto;}
+#items > div {border-radius: 18px; height: 680px; position: relative; border: 1px solid black; overflow: hidden;}
 #items > div + div {margin-top: 30px;}
 #items div.video {overflow: hidden;}
+#items > div:nth-child(4) {background: url("../img/airpods_max__large.png") center center no-repeat; background-size: contain;}
 #items div h3 {position: absolute; width: 100%; font-size: 120px; font-weight: 600; text-align: center;top: 50%; transform: translate(0, -50%); z-index: 100;}
 #items div h3 > span {position : absolute; bottom: -30px; font-size: 21px; left: 50%; transform: translate(-50%, 0);}
 #items div > p.price {position: absolute; font-size: 21px; left: 50%; transform: translate(-50%, 0); bottom: 190px;}
 #items div.video video {width: 100%; height: 100%; object-fit: cover;} 
+#items div.video h3 + span.new {position: absolute; top: 37%; left: 50%; transform: translate(-50%, -50%); font-size: 17px; padding: 6px 18px; color: #f56300; border: 1px solid#f56300; border-radius: 18px;}
 #items div.video a.control {position: absolute; bottom: 30px; right: 30px; background: transparent; width: 40px; height: 40px;}
 #items div.video a.control img:first-child {display: block;}
 #items div.video a.control img+img {display: none;}
@@ -118,8 +122,21 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #connection ul.slide li p.desc {display: none;}
 #connection ul.slide li a.control {display: inline-block; position: absolute;bottom: 20px; right: 20px; width: 33px; height: 33px; border: 1px solid var(--black-element-color); border-radius: 50%; background: var(--black-element-color);}
 #connection ul.slide li a.control i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff;}
-#connection ul.control {height: 67px; box-sizing: border-box; position: relative; display: flex; justify-content: center; align-items: center;}
-#connection ul.control li {display: inline-block; padding: 12.5px 20px;}
-#connection ul.control li a {display: inline-block; border: 2px solid var(--black-element-color); border-radius: 50%; width: 25px; height: 25px; position: relative;}
+#connection ul.control {box-sizing: border-box; position: relative; text-align: center; height: 80px}
+#connection ul.control li {display: inline-block; height: 100%; position: relative; width: 30px;}
+#connection ul.control li + li {margin-left: 18px;}
+#connection ul.control li a {display: inline-block; border: 2px solid var(--black-element-color); border-radius: 50%; width: 30px; height: 30px; position: absolute; top: 50%; left: 0px; transform: translate(0, -50%);box-sizing: border-box;}
 #connection ul.control li a i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px;}
+
+#compare {padding: 100px 0px 60px 0px; position: relative; min-height: 1223px;}
+#compare h2 {text-align: center; font-size: 64px; font-weight: 700; line-height: 1;}
+#compare div.box-wrap {display: table; table-layout: fixed; width: 1000px; height: 940px; position: absolute; left: 50%; transform: translate(-50%, 0); margin-top: 80px; border: 1px solid black; border-spacing: 20px;}
+div.box-wrap div.col {display: table-cell; border: 1px solid black; position: relative;}
+div.box-wrap div.col div {border: 1px solid #e0e0e0; display: inline-block; width: 100%; text-align: center; position: relative;}
+div.box-wrap div.col div.product img {vertical-align: bottom; margin-bottom: 30px;}
+div.box-wrap div.col div.product h3 {font-size: 21px; font-weight: 600; position: relative;}
+div.box-wrap div.col div.product h3 > span {position: absolute; bottom: -20px; left: 50%; transform: translate(-50%, 0);font-size: 12px; font-weight: 500;}
+div.box-wrap div.col div.product span.new {position: absolute; top: -15px; left: 50%; transform: translate(-50%, 0); color: var(--new-color);}
+div.box-wrap div.col div.product p.price {margin: 24px 0px;font-size: 16px; font-weight: 400;}
+div.box-wrap div.col div.product ~ div {height: calc((100% - 420px)/5);}
 #footer {background:var(--gray-color);}
