@@ -29,10 +29,12 @@ br.only-m::after {content: '\00a0';}
 }
 
 /*module*/
-a.round-box {display: inline-block; padding: 12px 22px; background-color: var(--blue-color); box-sizing: border-box; border: 1px solid val(--blue-color); border-radius: 24px; font-size: 14px; font-weight: 600; color: white; margin-right: 10px;}
-a.info-link {font-size: 17px; color: var(--blue-color); font-weight: 600;}
-#connection ~ section a.round-box {font-size: 10px; padding: 6px 13px;}
-#connection ~ section a.info-link {font-size: 12px;}
+a.round-box {display: inline-block; padding: 12px 22px; background-color: var(--blue-color); box-sizing: border-box; border: 1px solid val(--blue-color); border-radius: 24px; font-size: 14px; font-weight: 600; color: white; margin-right: 10px; transition: opacity 0.3s;}
+a.round-box:hover {opacity: 0.8;}
+.info-link {font-size: 17px; color: var(--blue-color); font-weight: 600; transition: text-decoration 0.3s;}
+.info-link:hover {text-decoration: underline;}
+#connection ~ * a.round-box {font-size: 10px; padding: 6px 13px;}
+#connection ~ * .info-link {font-size: 12px;}
 /* common */
 
 body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 14px;color: var(--black-element-color);letter-spacing: -0.03em;background: #ffffff;}
@@ -109,7 +111,7 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #connection ul.slide {position: relative; margin-top: 50px; width: 2500px;height: 486px; overflow: hidden;}
 #connection ul.slide > li {position: relative; height: 100%; width: 400px; float: left; border-radius: 18px; background: #ffffff; overflow: hidden;}
 #connection ul.slide > li + li {margin-left: 20px;}
-#connection ul.slide > li > img {position: absolute; left: 50%; transform: translate(-50%, 0);}
+#connection ul.slide > li > img {position: absolute; left: 50%; transform: translate(-50%, 0); display: block;}
 #connection ul.slide > li:first-child > img {top: -50px; width: 350px;}
 #connection ul.slide > li:nth-child(2) > img {top: 50%; transform: translate(-50%, -50%); width: 350px;}
 #connection ul.slide > li:nth-child(3) > img {top: 30px; width: 300px;}
@@ -118,8 +120,14 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #connection ul.slide > li:last-child >p.text-img {width: 100%; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 21px; font-weight: 600; color: #555555;}
 #connection ul.slide li p.title {position: absolute; bottom: 20px; left: 40px; font-size: 22px; font-weight: 600; display: inline-block;}
 #connection ul.slide li p.desc {display: none;}
-#connection ul.slide li a.control {display: inline-block; position: absolute;bottom: 20px; right: 20px; width: 33px; height: 33px; border: 1px solid var(--black-element-color); border-radius: 50%; background: var(--black-element-color);}
+#connection ul.slide li a.control {display: inline-block; position: absolute;bottom: 20px; right: 20px; width: 33px; height: 33px; border: 1px solid var(--black-element-color); border-radius: 50%; background: var(--black-element-color); transition: all 0.3s;}
 #connection ul.slide li a.control i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff;}
+#connection ul.slide li.on {padding: 50px; box-sizing: border-box;}
+#connection ul.slide li.on img {display: none;}
+#connection ul.slide li.on .text-img {display: none;}
+#connection ul.slide li.on p.title {top: 200px; left: 50px;}
+#connection ul.slide li.on p.desc {display: block; position: absolute; width: calc(100% - 100px); top: 240px ;font-size: 16px; font-weight: 500;}  
+#connection ul.slide li.on a.control {transform: rotate(45deg);}
 #connection ul.control {box-sizing: border-box; position: relative; text-align: center; height: 80px}
 #connection ul.control li {display: inline-block; height: 100%; position: relative; width: 30px;}
 #connection ul.control li + li {margin-left: 18px;}
@@ -137,9 +145,14 @@ div.box-wrap div.col div.product h3 > span {position: absolute; bottom: -20px; l
 div.box-wrap div.col div.product span.new {position: absolute; top: -15px; left: 50%; transform: translate(-50%, 0); color: var(--new-color);}
 div.box-wrap div.col div.product p.price {margin: 24px 0px;font-size: 16px; font-weight: 400;}
 div.box-wrap div.col div.product ~ div {height: calc((100% - 420px)/5);}
-#compare > a {position: absolute; bottom: 100px; left: 50%; transform: translate(-50%, 0); font-size: 20px; color:var(--blue-color); font-weight: 500;}
-#footer {background:var(--gray-color); padding: 80px 80px 0px 80px; box-sizing: border-box;}
-#footer ul.service {display: table; width: 100%; height: 400px;table-layout: fixed;}
-#footer ul.service > li {display: table-cell; position: relative; text-align: center; border-bottom: 1px solid var(--gray-border-color); background: cadetblue;}
-#footer ul.service > li img {display: block; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);}
-#footer ul.service > li img ~ * {background-color: coral;}
+#compare > a {position: absolute; bottom: 100px; left: 50%; transform: translate(-50%, 0); font-size: 20px; color:var(--blue-color); font-weight: 500; transition: text-decoration 0.3s;}
+#compare > a:hover {text-decoration: underline;}
+#footer {background:var(--gray-color); padding: 0px 80px; box-sizing: border-box;}
+#footer ul.service {display: table; width: 100%; height: 380px; table-layout: fixed; padding-top: 30px; border-bottom: 1px solid var(--gray-border-color); box-sizing: border-box; border-spacing: 30px 0px;}/*미디어 쿼리로 간격 조정 해야함*/
+ul.service > li {display: table-cell; position: relative; text-align: center;}
+ul.service > li > a:first-child {display: block;}
+ul.service > li > a > div.content {position:absolute; top:0; left: 0; width: 100%; height:100%;}
+ul.service > li > a div.content img {display: block; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);}
+ul.service > li > a div.content em {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;font-size: 16px; font-weight: 600; margin-top: 10px}
+ul.service > li > a div.content p {position: absolute; top: 58%; left: 50%; transform: translate(-50%, 0); font-size: 13px; font-weight: 400; width: 100%; line-height: 1.6;}
+ul.service > li > a div.content p.info-link {height: 20px; top: 300px;}
