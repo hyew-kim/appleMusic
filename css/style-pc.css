@@ -87,7 +87,7 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #main .black {background-color: var(--black-background-color); color: white;}
 
 #items {padding: 30px; max-width: 1580px; margin: 0px auto;}
-#items > div {border-radius: 18px; height: 680px; position: relative; border: 1px solid black; overflow: hidden;}
+#items > div {border-radius: 18px; height: 680px; position: relative; overflow: hidden;}
 #items > div + div {margin-top: 30px;}
 #items div.video {overflow: hidden;}
 #items > div:nth-child(4) {background: url("../img/airpods_max__large.png") center center no-repeat; background-size: contain;}
