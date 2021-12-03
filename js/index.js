@@ -5,12 +5,24 @@ $(document).ready(function(){
 });
 
 /*button on/off */
-$('#connection ul.slide li a.control').on('click', function() {
+$('#connection ul.slide li a.control').on('click',()=>{
   $(this).parent().toggleClass('on');
 });
 /*scroll 양에 따라 background 변경*/
-window.on('scroll', ()=>{checkScroll});
-
+$(window).on('scroll', ()=>{checkScroll()});
+var isPlay = true;
+$('#items div.video a.control').on('click', ()=>{
+  if (isPlay)
+    {
+      $('video').get(0).pause();
+      isPlay = false;
+    }
+  else
+  {
+    $('video').get(0).play();
+    isPlay = true;
+  }
+});
 function preventDefaultAnchor() {
   $(document).on('click', 'a[href="#"]', function(event) {
     event.preventDefault();
@@ -20,7 +32,7 @@ function preventDefaultAnchor() {
 function checkScroll(){
   var scrollAmt = $(document).scrollTop();
   if (scrollAmt < 1200)
-     $('body').css({'background': '#FFF'});
+     $('body').css({'background': '#fff'});
   else
     $('body').css({'background': '#F5F5F7'});
 }

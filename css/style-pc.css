@@ -89,14 +89,14 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #items {padding: 30px; max-width: 1580px; margin: 0px auto;}
 #items > div {border-radius: 18px; height: 680px; position: relative; overflow: hidden;}
 #items > div + div {margin-top: 30px;}
-#items div.video {overflow: hidden;}
+#items div.video {overflow: hidden; background-color: var(--gray-color);}
 #items > div:nth-child(4) {background: url("../img/airpods_max__large.png") center center no-repeat; background-size: contain; background-color: #fff;}
 #items div h3 {position: absolute; width: 100%; font-size: 120px; font-weight: 600; text-align: center;top: 50%; transform: translate(0, -50%); z-index: 100;}
 #items div h3 > span {position : absolute; bottom: -30px; font-size: 21px; left: 50%; transform: translate(-50%, 0);}
 #items div > p.price {position: absolute; font-size: 21px; left: 50%; transform: translate(-50%, 0); bottom: 190px;}
 #items div.video video {width: 100%; height: 100%; object-fit: cover;} 
 #items div.video h3 + span.new {position: absolute; top: 37%; left: 50%; transform: translate(-50%, -50%); font-size: 17px; padding: 6px 18px; color: #f56300; border: 1px solid#f56300; border-radius: 18px;}
-#items div.video a.control {position: absolute; bottom: 30px; right: 30px; background: transparent; width: 40px; height: 40px;}
+#items div.video a.control {position: absolute; bottom: 30px; right: 30px; background: transparent; width: 40px; height: 40px; z-index: 100;}
 #items div.video a.control img:first-child {display: block;}
 #items div.video a.control img+img {display: none;}
 #items div.video a.control.on img:first-child {display: none;}
@@ -108,6 +108,18 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #items div.black p.link a.round-box {color: var(--black-element-color); background: #ffffff;}
 #items div:last-child > p + img {position: absolute; left: 23%; top: 10%;}
 #items div:last-child > img:last-child {position: absolute; right: 27%; top: 45%;}
+@media screen and (max-width: 1670px){
+	#items div.black > p + img {left: 18%}
+	#items div.black > img:last-child {right: 18%;}
+	#items div:last-child > p + img {left: 20%}
+	#items div:last-child > img:last-child {right: 20%;}
+}
+@media screen and (max-width: 1350px){
+	#items div.black > p + img {left: 100px}
+	#items div.black > img:last-child {right: 100px}
+	#items div:last-child > p + img {left:100px}
+	#items div:last-child > img:last-child {right: 100px}
+}
 
 #connection {padding: 150px 30px 0px 30px; overflow: hidden;}
 #connection h2 {font-size: 60px; text-align: center; font-weight: 700; line-height: 1;}
