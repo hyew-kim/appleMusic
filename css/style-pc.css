@@ -51,22 +51,18 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #gnb > ul > li + li {margin-left: 50px;}
 #gnb > ul > li > a {display: block; line-height: 45px;}
 #header > h1:hover, #header > h1:focus, #top-menu > li:hover, #top-menu > li:focus, #gnb > ul > li:hover, #gnb > ul >li:focus {color: rgba(121, 116, 116, 0.979);} 
-
-#top-menu {position: absolute; right: 23%; top: 50%; transform: translate(0, -50%); z-index: 100;}
-#top-menu > li {display: inline-block; width: 35px;}
-#top-menu > li + li {margin-left: 25px;}
+#top-menu {position: absolute; right: 23%; top: 50%; transform: translate(0, -50%); z-index: 100; display: inline-block;}
+#top-menu li {float: left;}
+#top-menu li + li {margin-left: 50px;}
+#top-menu li a i {display: flex; align-items: center; justify-content: center;}
 @media screen and (max-width: 1700px) {
 	#header h1 {left: 15%;}
 	#top-menu {right: 15%;}
-	#top-menu > li + li{margin-left: 12px;}
 }
-
 @media screen and (max-width: 1300px) {
 	#header h1 {left: 8%;}
 	#top-menu {right: 7%;}
-	#top-menu > li + li{margin-left: 8px;}
 }
-
 #main-tab {position: relative; width: 100%; height: 130px;}
 #main-tab > ul {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; text-align: center}
 #main-tab > ul > li {display: inline-block; width: calc(12.5% - 10px); position: relative; height: 130px}
