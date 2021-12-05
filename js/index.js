@@ -11,7 +11,8 @@ $('#connection ul.slide li a.control').on('click',function() {
 /*scroll 양에 따라 background 변경*/
 $(window).on('scroll', ()=>{checkScroll()});
 var isPlay = true;
-$('#items div.video a.control').on('click', ()=>{
+$('#items div.video a.control').on('click', function(){
+  $(this).toggleClass('on');
   if (isPlay)
     {
       $('video').get(0).pause();
@@ -25,6 +26,7 @@ $('#items div.video a.control').on('click', ()=>{
 });
 $('#header a.menu').on('click',function(){
   $(this).toggleClass('close');
+  $(this).next().toggleClass('open');
 });
 function preventDefaultAnchor() {
   $(document).on('click', 'a[href="#"]', function(event) {
