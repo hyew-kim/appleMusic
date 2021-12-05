@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 
 /*button on/off */
-$('#connection ul.slide li a.control').on('click',()=>{
+$('#connection ul.slide li a.control').on('click',function() {
   $(this).parent().toggleClass('on');
 });
 /*scroll 양에 따라 background 변경*/
@@ -22,6 +22,9 @@ $('#items div.video a.control').on('click', ()=>{
     $('video').get(0).play();
     isPlay = true;
   }
+});
+$('#header a.menu').on('click',function(){
+  $(this).toggleClass('close');
 });
 function preventDefaultAnchor() {
   $(document).on('click', 'a[href="#"]', function(event) {

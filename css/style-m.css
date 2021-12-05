@@ -22,6 +22,7 @@ br.only-pc::after {content: '\00a0';}
 body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ; font-size: 14px; color: #000000; letter-spacing: -0.03em; background: #ffffff;}
 
 #wrapper {min-width: 320px; max-width: 1024px; margin: 0 auto; overflow: hidden;}
+
 :root {
 	--new-color:#bf4800;
 	--gray-color:#F5F5F7;
@@ -41,34 +42,25 @@ a.round-box:hover {opacity: 0.8;}
 /* common */
 
 body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 14px;color: var(--black-element-color);letter-spacing: -0.03em;background: #ffffff;}
-#wrapper {min-width: 1024px; overflow: hidden;}
+#wrapper {max-width:1024px; overflow: hidden;}
 
 #skip-nav {background-color: rgba(0, 0, 0, 0.6); color: white; position: fixed; z-index: 10000000; line-height: 40px; width: 100%; top: -40px; text-align: center; opacity: 0; transition: top 1s;}
 #skip-nav:focus {top: 0px}
 
-#header {background: #333333; color: #f5f5f7; position: relative; height: 44px; width: 100%; font-size: 17px; min-width: 1024px;}
-#header h1 {position: absolute; top: 50%; left: 23%; transform: translateY(-50%); font-size: 20px;}
+#header {background: #333333; color: #f5f5f7; position: relative; height: 44px; width: 100%; font-size: 17px;}
+#header h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20px;}
 #header h1 > a > i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-#gnb {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100; font-size: 12px; width: auto; min-width: 800px;}
-#gnb > ul > li {float: left; transition: color 0.3s}
-#gnb > ul > li + li {margin-left: 50px;}
-#gnb > ul > li > a {display: block; line-height: 45px;}
+#header a.menu {position: absolute; left: 15px; top: 50%; transform: translate(0, -50%); width: 18px; height: 18px; z-index: 10;}
+#header a.menu span {position: absolute; left: 50%; top: 35%; transform: translate(-50%, -50%); width: 100%; height: 1px; background: #fff; overflow: hidden; text-indent: -9999px; transition: all 0.3s;}
+#header a.menu::after {content: ''; position: absolute; top: 65%; left: 50%; bottom: 0; transform: translate(-50%, -50%); width: 100%; height: 1px; background: #fff; transition: all 0.3s;}
+#header a.menu.close span {top: 50%; transform: translate(-50%, -50%) rotate(45deg); width: 120%;}
+#header a.menu.close::after {top: 50%; transform: translate(-50%, -50%) rotate(-45deg); width: 120%;}
+#gnb {position: absolute; left: -9999px}
 #header > h1:hover, #header > h1:focus, #top-menu > li:hover, #top-menu > li:focus, #gnb > ul > li:hover, #gnb > ul >li:focus {color: rgba(121, 116, 116, 0.979);} 
 
-#top-menu {position: absolute; right: 23%; top: 50%; transform: translate(0, -50%); z-index: 100;}
-#top-menu > li {display: inline-block; width: 35px;}
-#top-menu > li + li {margin-left: 25px;}
-@media screen and (max-width: 1700px) {
-	#header h1 {left: 15%;}
-	#top-menu {right: 15%;}
-	#top-menu > li + li{margin-left: 12px;}
-}
-
-@media screen and (max-width: 1300px) {
-	#header h1 {left: 8%;}
-	#top-menu {right: 7%;}
-	#top-menu > li + li{margin-left: 8px;}
-}
+#top-menu {position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); z-index: 100; display: inline-block;}
+#top-menu li {float: left;}
+#top-menu li a i {display: flex; align-items: center; justify-content: center;}
 
 #main-tab {position: relative; width: 100%; height: 130px;}
 #main-tab > ul {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; text-align: center}
@@ -111,18 +103,6 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #items div.black p.link a.round-box {color: var(--black-element-color); background: #ffffff;}
 #items div:last-child > p + img {position: absolute; left: 23%; top: 10%;}
 #items div:last-child > img:last-child {position: absolute; right: 27%; top: 45%;}
-@media screen and (max-width: 1670px){
-	#items div.black > p + img {left: 18%}
-	#items div.black > img:last-child {right: 18%;}
-	#items div:last-child > p + img {left: 20%}
-	#items div:last-child > img:last-child {right: 20%;}
-}
-@media screen and (max-width: 1350px){
-	#items div.black > p + img {left: 100px}
-	#items div.black > img:last-child {right: 100px}
-	#items div:last-child > p + img {left:100px}
-	#items div:last-child > img:last-child {right: 100px}
-}
 
 #connection {padding: 150px 30px 0px 30px; overflow: hidden;}
 #connection h2 {font-size: 60px; text-align: center; font-weight: 700; line-height: 1;}
