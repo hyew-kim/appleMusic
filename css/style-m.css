@@ -19,9 +19,6 @@ br.only-pc {content: '';}
 br.only-pc::after {content: '\00a0';}
 
 /* common */
-body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ; font-size: 14px; color: #000000; letter-spacing: -0.03em; background: #ffffff;}
-
-#wrapper {min-width: 320px; max-width: 1024px; margin: 0 auto; overflow: hidden;}
 
 :root {
 	--new-color:#bf4800;
@@ -42,17 +39,18 @@ a.round-box:hover {opacity: 0.8;}
 /* common */
 
 body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 14px;color: var(--black-element-color);letter-spacing: -0.03em;background: #ffffff;}
+body.no-scroll {overflow: hidden;}
 #wrapper {max-width:1024px; overflow: hidden;}
 
 #skip-nav {background-color: rgba(0, 0, 0, 0.6); color: white; position: fixed; z-index: 10000000; line-height: 40px; width: 100%; top: -40px; text-align: center; opacity: 0; transition: top 1s;}
 #skip-nav:focus {top: 0px}
 
-#header {background: var(--black-element-color); color: #f5f5f7; position: relative; height: 44px; width: 100%; font-size: 17px;}
-#header h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20px;}
+#header {background: var(--black-element-color); color: var(--gray-color) ; position: relative; height: 44px; width: 100%; font-size: 17px;}
+#header h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20px; transition: color 1s;}
 #header h1 > a > i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-#header a.menu {position: absolute; left: 15px; top: 50%; transform: translate(0, -50%); width: 18px; height: 18px; z-index: 10;}
-#header a.menu span {position: absolute; left: 50%; top: 35%; transform: translate(-50%, -50%); width: 100%; height: 1px; background: #fff; overflow: hidden; text-indent: -9999px; transition: all 0.3s;}
-#header a.menu::after {content: ''; position: absolute; top: 65%; left: 50%; bottom: 0; transform: translate(-50%, -50%); width: 100%; height: 1px; background: #fff; transition: all 0.3s;}
+#header a.menu {position: absolute; left: 15px; top: 50%; transform: translate(0, -50%); width: 18px; height: 18px; z-index: 10; transition: color 1s;}
+#header a.menu span {position: absolute; left: 50%; top: 35%; transform: translate(-50%, -50%); width: 100%; height: 1px; background: var(--gray-color); overflow: hidden; text-indent: -9999px; transition: all 0.3s;}
+#header a.menu::after {content: ''; position: absolute; top: 65%; left: 50%; bottom: 0; transform: translate(-50%, -50%); width: 100%; height: 1px; background: var(--gray-color); transition: all 0.3s;}
 #header a.menu.close span {top: 50%; transform: translate(-50%, -50%) rotate(45deg); width: 120%;}
 #header a.menu.close::after {top: 50%; transform: translate(-50%, -50%) rotate(-45deg); width: 120%;}
 #gnb {position: fixed; top: -100%; width: 100%;height: calc(100vh - 44px);background-color: var(--black-element-color); z-index: 1000;}
@@ -60,9 +58,10 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #gnb.open ~ #top-menu {display: none;}
 #gnb.open ul {width: 80%; margin: 20px auto; box-sizing: border-box;}
 #gnb.open ul li {padding: 10px 0px; border-bottom: 1px solid var(--gray-border-color); box-sizing: border-box;}
-#header > h1:hover, #header > h1:focus, #top-menu > li:hover, #top-menu > li:focus, #gnb > ul > li:hover, #gnb > ul >li:focus {color: rgba(121, 116, 116, 0.979);} 
 
-#top-menu {position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); z-index: 100; display: inline-block;}
+#header > h1:hover, #header > h1:focus, #top-menu > li:hover, #top-menu > li:focus, #gnb > ul > li:hover, #gnb > ul >li:focus, .menu:hover{color: #fff;} 
+
+#top-menu {position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); z-index: 100; display: inline-block; transition: color 1s;}
 #top-menu li {float: left;}
 #top-menu li a i {display: flex; align-items: center; justify-content: center;}
 
@@ -82,7 +81,7 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #main-tab > ul > li > a > span {position: absolute; font-size: 12px; bottom: 30px; width: 110%; left: 50%; transform: translate(-50%, 0);} 
 #main-tab > ul > li > a > span:nth-child(2) {bottom: 15px; font-size: 11px;}
 #main-tab > ul > li > a > span:nth-child(3) {bottom: 0px; font-size: 10px; color:var(--new-color)}
-
+#main-tab div.control {display: none;}
 #main .black {background-color: var(--black-background-color); color: white;}
 #main .white {background-color: #fff;}
 #items {padding: 30px; max-width: 1580px; margin: 0px auto;}
@@ -109,32 +108,33 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #items div:last-child > img:last-child {position: absolute; right: 30%; top: 50%; height: 65%;}
 
 #connection {padding: 150px 30px 0px 30px; overflow: hidden;}
-#connection h2 {font-size: 40px; text-align: center; font-weight: 700; line-height: 1;}
-#connection ul.slide {position: relative; margin-top: 50px; width: 2500px;height: 486px; overflow: hidden;}
-#connection ul.slide > li {position: relative; height: 100%; width: 400px; float: left; border-radius: 18px; background: #ffffff; overflow: hidden;}
+#connection h2 {font-size: 32px; text-align: center; font-weight: 700; line-height: 1;}
+#connection ul.slide {position: relative; margin-top: 50px; width: 2500px;height: 400px; overflow: hidden;}
+#connection ul.slide > li {position: relative; height: 100%; width: 300px; float: left; border-radius: 18px; background: #ffffff; overflow: hidden;}
 #connection ul.slide > li + li {margin-left: 20px;}
 #connection ul.slide > li > img {position: absolute; left: 50%; transform: translate(-50%, 0); display: block;}
-#connection ul.slide > li:first-child > img {top: -50px; width: 350px;}
+#connection ul.slide > li:first-child > img {top: 10px; width: 80%; height: 80%;}
 #connection ul.slide > li:nth-child(2) > img {top: 50%; transform: translate(-50%, -50%); width: 350px;}
-#connection ul.slide > li:nth-child(3) > img {top: 30px; width: 300px;}
+#connection ul.slide > li:nth-child(3) > img {top: 30px; width: 80%; height: 80%;}
 #connection ul.slide > li:last-child > img {top: 40%; transform: translate(-50%, -50%)}
-#connection ul.slide > li:nth-child(4) >p.text-img {position: absolute;top: 50%; left: 50%; transform: translate(-50%, -50%) ;background: linear-gradient(90deg,#ffa54d,#f07bc5 50%,#43aeff);-webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 38px; line-height: 1; font-weight: 700; text-align: center; width: 100%;}
-#connection ul.slide > li:last-child >p.text-img {width: 100%; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 21px; font-weight: 600; color: #555555;}
-#connection ul.slide li p.title {position: absolute; bottom: 20px; left: 40px; font-size: 22px; font-weight: 600; display: inline-block;}
+#connection ul.slide > li:nth-child(4) >p.text-img {position: absolute;top: 50%; left: 50%; transform: translate(-50%, -50%) ;background: linear-gradient(90deg,#ffa54d,#f07bc5 50%,#43aeff);-webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 23px; line-height: 1; font-weight: 700; text-align: center; width: 100%;}
+#connection ul.slide > li:last-child >p.text-img {width: 100%; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 17px; font-weight: 600; color: #555555;}
+#connection ul.slide li p.title {position: absolute; bottom: 20px; left: 40px; font-size: 18px; font-weight: 600; display: inline-block;}
 #connection ul.slide li p.desc {display: none;}
 #connection ul.slide li a.control {display: inline-block; position: absolute;bottom: 20px; right: 20px; width: 33px; height: 33px; border: 1px solid var(--black-element-color); border-radius: 50%; background: var(--black-element-color); transition: all 0.3s;}
 #connection ul.slide li a.control i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff;}
 #connection ul.slide li.on {padding: 50px; box-sizing: border-box;}
 #connection ul.slide li.on img {display: none;}
 #connection ul.slide li.on .text-img {display: none;}
-#connection ul.slide li.on p.title {top: 200px; left: 50px;}
-#connection ul.slide li.on p.desc {display: block; position: absolute; width: calc(100% - 100px); top: 240px ;font-size: 16px; font-weight: 500; line-height: 1.5;}  
+#connection ul.slide li.on p.title {top: 120px; width: 85%;left: 50%;transform: translate(-50%, 0);}
+#connection ul.slide li.on p.desc {display: block; position: absolute; width: 85%; top: 160px; left: 50%;font-size: 16px; font-weight: 500; line-height: 1.5; transform: translate(-50%, 0);}  
 #connection ul.slide li.on a.control {transform: rotate(45deg);}
 #connection ul.control {box-sizing: border-box; position: relative; text-align: center; height: 80px}
 #connection ul.control li {display: inline-block; height: 100%; position: relative; width: 30px;}
 #connection ul.control li + li {margin-left: 18px;}
 #connection ul.control li a {display: inline-block; border: 2px solid var(--black-element-color); border-radius: 50%; width: 30px; height: 30px; position: absolute; top: 50%; left: 0px; transform: translate(0, -50%);box-sizing: border-box;}
 #connection ul.control li a i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px;}
+#connection ul.control li a.off {opacity: 0.5; pointer-events: none;}
 
 #compare {padding: 80px 0px 40px 0px; position: relative; min-height: 2500px;}
 #compare h2 {text-align: center; font-size: 40px; font-weight: 700; line-height: 1;}
@@ -211,7 +211,7 @@ address div.info p.nation {position: relative; top: -63px;}
 	#items div.black> p + img {left: 10%;}
 	#items div.black > img:last-child {right: 10%;}
 }
-@media screen and (max-width: 600px){	
+@media screen and (max-width: 650px){	
 	#items div > h3 {font-size: 70px !important;}
 	#items > div > p.price {bottom: 130px;}
 	#items div.black > p + img {left: 8%; top: 20%; height: 50%;}
@@ -220,15 +220,20 @@ address div.info p.nation {position: relative; top: -63px;}
 	#items div:last-child > img:last-child {right: 20%; top: 20%; height: 50%;}
 	#items div p.link a.round-box {padding: 8px 15px;}
 	#items div p.link a.info-link {font-size: 14px;}
-
-	#connection h2 {font-size: 32px;}
-	#connection ul.slide {height: 400px;}
-	#connection ul.slide li {width: 300px;}
-	#connection ul.slide li p.title {font-size: 18px}
-	#connection ul.slide li a.control {width: 23px; height: 23px;}
-	#connection ul.slide li:first-child img {height: 80%; width: 80%; top: 10px}
-	#connection ul.slide li.on p.title {top: 150px;}
-	#connection ul.slide li.on p.desc {top: 190px;}
-
 	#compare h2 {font-size: 32px;}
+
+	#main-tab ul {left: 0px; top: 0px; transform: none; margin: 0px -20px;}
+	#main-tab div.control {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		position: relative;
+		align-items: center;
+		z-index: 100;
+	}
+	#main-tab div.control a {display: none; position: absolute; width: 30px; height: 90%;box-sizing: border-box; border-right: 1px solid var(--gray-border-color); padding: 0px 10px; background-color: #fff; top: 50%; transform: translate(0,-50%);text-align: center;}
+	#main-tab div.control a:last-child {display:block; right: 0px; border-left: 1px solid var(--gray-border-color); border-right: none;}
+	#main-tab div.control a i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+	#main-tab div.control.on a {display: block;}
+	#main-tab div.control.on a:last-child {display: none;}
 }
