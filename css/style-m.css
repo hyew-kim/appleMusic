@@ -178,19 +178,20 @@ div.notice p {margin-bottom: 10px;}
 div.notice ol {padding: 0px 10px;}
 div.notice ol li+li {margin-top: 10px;}
 
-div.site p {padding: 15px 0px; height: 50px; box-sizing: border-box; display: flex; align-items: center; justify-content: flex-start;}
+div.site p {padding: 15px 0px; height: 50px; box-sizing: border-box; display: flex; align-items: center; justify-content: flex-start; border-bottom: 1px solid var(--gray-border-color);}
 div.site p > * {display: flex; flex-direction: column; align-items: center; font-size: 12px; margin-left: 10px; justify-content: space-between;}
 div.site p > * > i {font-size: 17px;}
 div.site p > a {position: relative; top: -1px;}
 div.site p > span i {color: #6e6e73;}
-div.site div.site-wrapper {width: 100%; overflow: hidden; position: relative;}
-div.site ul {float:left; width: 20%; color: #6e6e73; font-size: 11px;}
-div.site ul:nth-child(3) {position: absolute; left: 20%; bottom: 23px;}
-div.site ul:nth-child(6) {position: absolute; right: 20%; top: 80px;}
-div.site ul:last-child {position: absolute; right: 0px; bottom: -25px;}
-div.site ul em {font-weight: 700;}
-div.site ul > * + * {margin-top: 10px;}
-
+div.site ul.site-wrapper {width: 100%; overflow: hidden; position: relative; color: #6e6e73; font-size: 11px;}
+div.site ul.site-wrapper > li {width: 100%; border-bottom: 1px solid var(--gray-border-color);}
+div.site ul.site-wrapper > li > a {display: block; font-weight: 600; width: 100%; position: relative; padding: 10px 0px; box-sizing: border-box;}
+div.site ul.site-wrapper > li > a > i {position: absolute; right: 5px; transition: transform 0.3s;}
+div.site ul.site-wrapper > li > ul {height: 0px; overflow: hidden;transition: height 0.3s; padding-left: 10px; box-sizing: border-box;}
+div.site ul.site-wrapper > li > ul > li:first-child {margin-top: 10px;}
+div.site ul.site-wrapper > li > ul > li {margin-bottom: 15px; transition: all 0.3s;}
+div.site ul.site-wrapper > li > ul > li:hover {text-decoration: underline;}
+div.site ul.site-wrapper > li.open > a > i {transform: rotate(45deg);}
 address {color: #6e6e73; font-size: 11px; margin: 20px 0px;}
 address > p {padding: 10px 0px; box-sizing: border-box;}
 address > p > a {color: var(--blue-color);}
@@ -223,14 +224,7 @@ address div.info p.nation {position: relative; top: -63px;}
 	#compare h2 {font-size: 32px;}
 
 	#main-tab ul {left: 0px; top: 0px; transform: none; margin: 0px -20px;}
-	#main-tab div.control {
-		display: flex;
-		height: 100%;
-		width: 100%;
-		position: relative;
-		align-items: center;
-		z-index: 100;
-	}
+	#main-tab div.control {display: flex; height: 100%; width: 100%; position: relative; align-items: center; z-index: 100;}
 	#main-tab div.control a {display: none; position: absolute; width: 30px; height: 90%;box-sizing: border-box; border-right: 1px solid var(--gray-border-color); padding: 0px 10px; background-color: #fff; top: 50%; transform: translate(0,-50%);text-align: center;}
 	#main-tab div.control a:last-child {display:block; right: 0px; border-left: 1px solid var(--gray-border-color); border-right: none;}
 	#main-tab div.control a i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
