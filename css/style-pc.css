@@ -33,10 +33,8 @@ a.round-box {display: inline-block; padding: 12px 22px; background-color: var(--
 a.round-box:hover {opacity: 0.8;}
 .info-link {font-size: 17px; color: var(--blue-color); font-weight: 600; transition: text-decoration 0.3s;}
 .info-link:hover {text-decoration: underline;}
-#connection ~ * a.round-box {font-size: 10px; padding: 6px 13px;}
-#connection ~ * .info-link {font-size: 12px;}
-/* common */
 
+/* common */
 body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 14px;color: var(--black-element-color);letter-spacing: -0.03em;background: #ffffff;}
 #wrapper {min-width: 1024px; overflow: hidden;}
 
@@ -80,6 +78,31 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #main-tab > ul > li > a > span:nth-child(2) {bottom: 15px; font-size: 11px;}
 #main-tab > ul > li > a > span:nth-child(3) {bottom: 0px; font-size: 10px; color:var(--new-color)}
 
+#footer .wrapper {width: 940px; margin: 0 auto;}
+
+div.notice {color: #6e6e73; font-size: 11px; border-bottom: 1px solid var(--gray-border-color); padding: 15px 0px; box-sizing: border-box;}
+
+div.site ul.site-wrapper {width: 100%; overflow: hidden; position: relative;}
+div.site ul.site-wrapper > li {float: left;width: 20%; color: #6e6e73; font-size: 12px;}
+div.site ul.site-wrapper > li:nth-child(3) {position: absolute; left: 20%; bottom: 23px;}
+div.site ul.site-wrapper > li:nth-child(6) {position: absolute; right: 20%; top: 85px;}
+div.site ul.site-wrapper > li:last-child {position: absolute; right: 0px; bottom: -25px;}
+div.site ul.site-wrapper > li > a {font-weight: 700;}
+div.site ul.site-wrapper > li > ul > li {margin-top: 10px;}
+
+address {color: #6e6e73; font-size: 11px;; margin: 20px 0px;}
+address >  p {padding: 10px 0px; box-sizing: border-box; border-bottom: 1px solid var(--gray-border-color);}
+address >  p > a {color: var(--blue-color);}
+address div.info {display: flex; padding: 10px 0px; position: relative;}
+address div.info .notification {margin-left: 20px; box-sizing: border-box;}
+address div.info .notification span {padding: 0px 10px;}
+address div.info .notification span + span {border-left: 1px solid var(--gray-border-color);}
+address div.info p.nation {position: absolute; right: 0px;}
+
+/*index*/
+
+
+/*airpod page*/
 #main .black {background-color: var(--black-background-color); color: white;}
 #main .white {background-color: #fff;}
 #items {padding: 30px; max-width: 1580px; margin: 0px auto;}
@@ -145,6 +168,8 @@ body {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 #connection ul.control li a {display: inline-block; border: 2px solid var(--black-element-color); border-radius: 50%; width: 30px; height: 30px; position: absolute; top: 50%; left: 0px; transform: translate(0, -50%);box-sizing: border-box;}
 #connection ul.control li a i {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px;}
 #connection ul.control li a.off {opacity: 0.5; pointer-events: none;}
+#connection ~ * a.round-box {font-size: 10px; padding: 6px 13px;}
+#connection ~ * .info-link {font-size: 12px;}
 
 #compare {padding: 100px 0px 60px 0px; position: relative; min-height: 1500px;}
 #compare h2 {text-align: center; font-size: 60px; font-weight: 700; line-height: 1;}
@@ -172,7 +197,6 @@ div.col div.battery em {font-size: 35px; font-weight: 600; position: relative; t
 #compare > a {position: absolute; bottom: 100px; left: 50%; transform: translate(-50%, 0); font-size: 20px; color:var(--blue-color); font-weight: 500; transition: text-decoration 0.3s;}
 #compare > a:hover {text-decoration: underline;}
 
-#footer .wrapper {width: 940px; margin: 0 auto;}
 #footer ul.service {display: table; width: 100%; height: 380px; table-layout: fixed; padding-top: 30px; border-bottom: 1px solid var(--gray-border-color); box-sizing: border-box; border-spacing: 15px 0px;}
 ul.service > li {display: table-cell; position: relative; text-align: center;}
 ul.service > li > a:first-child {display: block;}
@@ -182,7 +206,6 @@ ul.service > li > a div.content em {position: absolute; top: 50%; left: 50%; tra
 ul.service > li > a div.content p {position: absolute; top: 58%; left: 50%; transform: translate(-50%, 0); font-size: 13px; font-weight: 400; width: 100%; line-height: 1.6;}
 ul.service > li > a div.content p.info-link {height: 20px; top: 300px;}
 
-div.notice {color: #6e6e73; font-size: 11px; border-bottom: 1px solid var(--gray-border-color); padding: 15px 0px; box-sizing: border-box;}
 div.notice p {margin-bottom: 10px;}
 div.notice ol {padding: 0px 10px;}
 div.notice ol li+li {margin-top: 10px;}
@@ -192,19 +215,3 @@ div.site p > * {display: flex; flex-direction: column; align-items: center; font
 div.site p > * > i {font-size: 17px;}
 div.site p > a {position: relative; top: -1px;}
 div.site p > span i {color: #6e6e73;}
-div.site ul.site-wrapper {width: 100%; overflow: hidden; position: relative;}
-div.site ul.site-wrapper > li {float: left;width: 20%; color: #6e6e73; font-size: 12px;}
-div.site ul.site-wrapper > li:nth-child(3) {position: absolute; left: 20%; bottom: 23px;}
-div.site ul.site-wrapper > li:nth-child(6) {position: absolute; right: 20%; top: 85px;}
-div.site ul.site-wrapper > li:last-child {position: absolute; right: 0px; bottom: -25px;}
-div.site ul.site-wrapper > li > a {font-weight: 700;}
-div.site ul.site-wrapper > li > ul > li {margin-top: 10px;}
-
-address {color: #6e6e73; font-size: 11px;; margin: 20px 0px;}
-address >  p {padding: 10px 0px; box-sizing: border-box; border-bottom: 1px solid var(--gray-border-color);}
-address >  p > a {color: var(--blue-color);}
-address div.info {display: flex; padding: 10px 0px; position: relative;}
-address div.info .notification {margin-left: 20px; box-sizing: border-box;}
-address div.info .notification span {padding: 0px 10px;}
-address div.info .notification span + span {border-left: 1px solid var(--gray-border-color);}
-address div.info p.nation {position: absolute; right: 0px;}
