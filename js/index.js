@@ -6,7 +6,6 @@ if (navigator.userAgent.toLowerCase().indexOf("Trident") > -1)
 
 $(document).ready(function(){
   preventDefaultAnchor();
-  checkScroll();
 });
 
 $(window).on('resize', function(){
@@ -14,7 +13,10 @@ $(window).on('resize', function(){
   if ($(this).width() >= 640)
     $('#main-tab ul').css({'left':'50%'});
   else
+  {
     moveMainTab(0);
+    $('#main-tab ul').css({'transition': 'none'});
+  }
   if ($(this).width() >= 1024){
     $('div.site ul.site-wrapper > li > ul').removeAttr('style');
     //style속성으로 ul의 height: 0px 이렇게 하면 pc버전에서 문제생김!
@@ -25,22 +27,7 @@ $(window).on('resize', function(){
 $('#connection ul.slide li a.control').on('click',function() {
   $(this).parent().toggleClass('on');
 });
-/*scroll 양에 따라 background 변경*/
-$(window).on('scroll', ()=>{checkScroll()});
-var isPlay = true;
-$('#items div.video a.control').on('click', function(){
-  $(this).toggleClass('on');
-  if (isPlay)
-  {
-    $('video').get(0).pause();
-    isPlay = false;
-  }
-  else
-  {
-    $('video').get(0).play();
-    isPlay = true;
-  }
-});
+
 $('#header a.menu').on('click',function(){
   $(this).toggleClass('close');
   $(this).next().toggleClass('open');
@@ -92,13 +79,6 @@ function preventDefaultAnchor() {
   });
 }
 
-function checkScroll(){
-  var scrollAmt = $(document).scrollTop();
-  if (scrollAmt < 1200)
-     $('body').css({'background': '#fff'});
-  else
-    $('body').css({'background': '#F5F5F7'});
-}
 
 function showBanner(n) {
   var offsetX = -$(`#connection ul.slide li:eq(${n})`).position().left;
@@ -119,7 +99,7 @@ function showBanner(n) {
 }
 
 function moveMainTab (delX){
-  $('#main-tab ul').css({'left':`${delX}px`});
+  $('#main-tab ul').css({'left':`${delX}px`, 'transition': 'left 1s'});
   if (delX === 0)
     $('#main-tab div.control').removeClass('on');
   else

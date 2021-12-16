@@ -84,7 +84,7 @@ body.no-scroll {overflow: hidden;}
 #main-tab div.control {display: none;}
 #main .black {background-color: var(--black-background-color); color: white;}
 #main .white {background-color: #fff;}
-#items {padding: 30px; max-width: 1580px; margin: 0px auto;}
+#items {padding: 30px; margin: 0px auto;}
 #items > div {border-radius: 18px; height: 500px; position: relative; overflow: hidden;}
 #items > div + div {margin-top: 30px;}
 #items div.video {overflow: hidden; background-color: var(--gray-color);}
@@ -159,7 +159,7 @@ div.box-wrap div.col div.product ~ div p {margin-top: 30px;}
 div.box-wrap div.col div.product ~ div p.ir-hidden ~ span {display: block; width: 20px; height: 2px; background-color: var(--black-element-color); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 div.col div.battery {display: flex; flex-direction: column; align-items: flex-start; justify-content: center;}
 div.col div.battery em {font-size: 35px; font-weight: 600; position: relative; top: 25px;}
-#compare > a {position: absolute; bottom: -20px; left: 50%; transform: translate(-50%, 0); font-size: 18px; color:var(--blue-color); font-weight: 500; transition: text-decoration 0.3s;}
+#compare > a {position: absolute; bottom: -20px; font-size: 15px;  width: 100%; text-align: center; color:var(--blue-color); font-weight: 500; transition: text-decoration 0.3s;}
 #compare > a:hover {text-decoration: underline;}
 
 #footer .wrapper {width: 90%; margin: 0 auto;}
@@ -199,7 +199,7 @@ address div.info {display: flex; padding: 10px 0px; position: relative; flex-dir
 address div.info .notification {margin-top: 10px;}
 address div.info .notification span {padding-right: 10px; box-sizing: border-box;}
 address div.info .notification span + span {border-left: 1px solid var(--gray-border-color); padding-left: 10px;}
-address div.info p.nation {position: relative; top: -63px;}
+address div.info p.nation {position: relative; top: -7.5em}
 
 @media screen and (max-width: 850px){
 	#items div h3 {font-size: 90px;}

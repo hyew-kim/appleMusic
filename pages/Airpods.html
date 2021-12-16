@@ -16,7 +16,7 @@
       <a href="#main" id="skip-nav">본문 바로가기</a>
       <header id="header">
         <h1>
-          <a href="#">
+          <a href="../index.html">
             <i class="fab fa-apple"><span>apple</span></i>
           </a>
         </h1>
@@ -97,6 +97,7 @@
         <section id="items">
           <h2 class="ir-hidden">상품소개</h2>
           <div class="video">
+             <video src="../img/airpod_3.mp4" autoplay muted loop></video>
             <h3>
               AirPods
               <span>3세대</span>
@@ -108,7 +109,6 @@
               <a href="#" class="info-link">더 알아보기 &gt;</a>
             </p>
             <a href="#" class="control on"><img src="../img/play_icon_large.png" alt="재생" /><img src="../img/play-buffer-pause-LMS-01-jorge-1.png" alt="정지" /></a>
-            <video src="../img/airpod_3.mp4" autoplay muted loop></video>
           </div>
           <div class="black">
             <h3>AirPods Pro</h3>
@@ -541,4 +541,30 @@
   </body>
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/index.js"></script>
+  <script>
+    checkScroll();
+    /*scroll 양에 따라 background 변경*/
+    $(window).on('scroll', ()=>{checkScroll()});
+    var isPlay = true;
+    $('#items div.video a.control').on('click', function(){
+      $(this).toggleClass('on');
+      if (isPlay)
+      {
+        $('video').get(0).pause();
+        isPlay = false;
+      }
+      else
+      {
+        $('video').get(0).play();
+        isPlay = true;
+      }
+    });
+    function checkScroll(){
+    var scrollAmt = $(document).scrollTop();
+    if (scrollAmt < 1200)
+      $('body').css({'background': '#fff'});
+    else
+      $('body').css({'background': '#F5F5F7'});
+  }
+  </script>
 </html>
