@@ -105,7 +105,7 @@ address div.info p.nation {position: absolute; right: 0px;}
 #holiday .popup-box {background-color: #E34140; height: 45px; text-align: center; color: #fff; font-size: 13px; line-height: 45px; font-weight: 600;}
 #holiday .popup-box a:hover {text-decoration: underline;}
 #holiday > img {position: absolute; left: 50%; top: 80px;transform: translate(-50%, 0); height: 88px; width: 70px;}
-#holiday p.info-link {position: absolute; left: 50%; top: 280px; transform: translate(-50%, 0px);}
+#holiday p.info-link {position: absolute; left: 50%; top: 280px; transform: translate(-50%, 0px); font-size: 16px;}
 #holiday ul.img-list {height: 350px; width: 1024px; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: table; table-layout: fixed;}
 #holiday ul.img-list li {display: table-cell; background: url("../img/holiday_macbook.png") center center no-repeat; background-size: 100%;} 
 #holiday ul.img-list li:nth-child(2) {background: url("../img/holiday_ipadmin.png")center center  no-repeat; background-size: 100%;}
@@ -145,6 +145,8 @@ address div.info p.nation {position: absolute; right: 0px;}
 #item-box div.box div.info .info-link +.info-link {margin-left: 30px;}
 #item-box div.box div.info .info-link {font-size: 14px;}
 #item-box div.box:nth-child(3) .info, #item-box div.box:nth-child(6) .info, #item-box div.box:last-child .info{top: 90%}
+
+
 /*airpod page*/
 #main .black {background-color: var(--black-background-color); color: white;}
 #main .white {background-color: #fff;}

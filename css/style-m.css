@@ -65,6 +65,99 @@ body.no-scroll {overflow: hidden;}
 #top-menu li {float: left;}
 #top-menu li a i {display: flex; align-items: center; justify-content: center;}
 
+#footer .wrapper {width: 90%; margin: 0 auto;}
+
+div.notice {color: #6e6e73; font-size: 11px; border-bottom: 1px solid var(--gray-border-color); padding: 15px 0px; box-sizing: border-box;}
+div.notice p {margin-bottom: 10px;}
+div.notice ol {padding: 0px 10px;}
+div.notice ol li+li {margin-top: 10px;}
+
+div.site ul.site-wrapper {width: 100%; overflow: hidden; position: relative; color: #6e6e73; font-size: 11px;}
+div.site ul.site-wrapper > li {width: 100%; border-bottom: 1px solid var(--gray-border-color);}
+div.site ul.site-wrapper > li > a {display: block; font-weight: 600; width: 100%; position: relative; padding: 10px 0px; box-sizing: border-box;}
+div.site ul.site-wrapper > li > a > i {position: absolute; right: 5px; transition: transform 0.3s;}
+div.site ul.site-wrapper > li > ul {height: 0px; overflow: hidden;transition: height 0.3s; padding-left: 10px; box-sizing: border-box;}
+div.site ul.site-wrapper > li > ul > li:first-child {margin-top: 10px;}
+div.site ul.site-wrapper > li > ul > li {margin-bottom: 15px; transition: all 0.3s;}
+div.site ul.site-wrapper > li > ul > li:hover {text-decoration: underline;}
+div.site ul.site-wrapper > li.open > a > i {transform: rotate(45deg);}
+address {color: #6e6e73; font-size: 11px; margin: 20px 0px;}
+address > p {padding: 10px 0px; box-sizing: border-box;}
+address > p > a {color: var(--blue-color);}
+address div.info {display: flex; padding: 10px 0px; position: relative; flex-direction: column; justify-content: space-between; align-items: flex-start; bottom: -20px;}
+address div.info .notification {margin-top: 10px;}
+address div.info .notification span {padding-right: 10px; box-sizing: border-box;}
+address div.info .notification span + span {border-left: 1px solid var(--gray-border-color); padding-left: 10px;}
+address div.info p.nation {position: relative; top: -6em;}
+
+/*Index page*/
+#holiday {height:720px; background-color: #EAF2FC; margin-bottom: 10px; position: relative;}
+#holiday h2 {position: absolute; top: 190px; left: 0px; width: 100%; font-size: 38px; font-weight: 600; text-align: center;}
+#holiday .popup-box {background-color: #E34140; height: 45px; text-align: center; color: #fff; font-size: 13px; line-height: 45px; font-weight: 600;}
+#holiday .popup-box a:hover {text-decoration: underline;}
+#holiday > img {position: absolute; left: 50%; top: 80px;transform: translate(-50%, 0); height: 70px; width:60px;}
+#holiday p.info-link {position: absolute; left: 50%; top: 280px; transform: translate(-50%, 0px); font-size: 16px;}
+#holiday ul.img-list {height: 350px; width: 100%; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: table; table-layout: fixed;}
+#holiday ul.img-list li {display: table-cell; background: url("../img/holiday_macbook.png") center center no-repeat; background-size: 100%;} 
+#holiday ul.img-list li:nth-child(2) {background: url("../img/holiday_ipadmin.png")center center  no-repeat; background-size: 100%;}
+#holiday ul.img-list li:last-child {background: url("../img/holiday_ipadair.png")center center  no-repeat; background-size: 100%;}
+
+#iphone13_pro {height:700px; background:url("../img/iphone_13pro.jpg") center center no-repeat;background-size: cover; margin-bottom: 10px; padding-top: 30px; box-sizing: border-box;}
+#iphone13_pro h2 {font-size: 38px; font-weight: 600; text-align: center; position: relative; top: 10px;}
+#iphone13_pro .desc {font-size: 20px; font-weight: 500;text-align: center; margin-top: 20px;}
+#iphone13_pro div.info {display: flex; justify-content: center; align-items: center; margin-top: 20px;}
+#iphone13_pro div.info .info-link {font-size: 16px;}
+#iphone13_pro div.info .info-link +.info-link {margin-left: 30px;}
+
+#iphone13 {height:700px; background:url("../img/iphone_13.jpg") center center no-repeat; background-size: cover; margin-bottom: 10px; padding-top: 30px; box-sizing: border-box;}
+#iphone13 h2 {font-size: 38px; font-weight: 600; text-align: center; color: #fff;position: relative; top: 10px;} 
+#iphone13 .desc {font-size: 20px; font-weight: 500;text-align: center; margin-top: 20px; color: #E9B1D8}
+#iphone13 div.info {display: flex; justify-content: center; align-items: center; margin-top: 20px;}
+#iphone13 div.info .info-link {font-size: 16px;}
+#iphone13 div.info .info-link +.info-link {margin-left: 30px;}
+#item-box {overflow: hidden;}
+#item-box div.box {float: left; width: calc(50% - 5px); height: 490px; margin-bottom: 10px; position: relative;}
+#item-box div.box:nth-child(2n + 1) {margin-left: 10px;}
+#item-box div.box:nth-child(2) {background: url("../img/tile_macbookpro__medium.jpg") center no-repeat; background-size: 516px 490px}
+#item-box div.box:nth-child(3) {background: url("../img/tile_airpods.jpg") center 0px no-repeat; background-size: cover;}
+#item-box div.box:nth-child(4) {background: url("../img/tile_watch___medium.jpg") center no-repeat; background-size: 516px 490px;}
+#item-box div.box:nth-child(5) {background: url("../img/promo_ipad_mini__medium.jpg") center no-repeat; background-size: 516px 490px;}
+#item-box div.box:nth-child(6) {background: url("../img/promo_ipad__medium.jpg") center no-repeat; background-size: 516px 490px}
+#item-box div.box:last-child {background: url("../img/tile_mariah__medium.jpg") center no-repeat; background-size: 516px 490px}
+#item-box div.box h3 {font-size: 30px; font-weight: 600; text-align: center; margin-top: 40px; position: relative;}
+#item-box div.box img.title {position: absolute; left: 50%; top: 50px; transform: translate(-50%, 0px);}
+#item-box div.box:nth-child(4) img.title {top: 35px;}
+#item-box div.box:last-child img:last-child {width: 10px}
+#item-box div.box:nth-child(3) h3, #item-box div.box:nth-child(6) h3 {position: relative; bottom: -65%}
+#item-box div.box:nth-child(4) h3 + p {position: absolute; top: 15px; left: 50%; transform: translateX(-50%);font-size: 13px; color: var(--new-color);}
+#item-box div.box:nth-child(6) h3 span {font-size: 13px; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);}
+#item-box div.box p.desc {position: absolute; top: 90px; text-align: center;font-size: 16px; font-weight: 500; width: 100%;}
+#item-box div.box:nth-child(3) p.desc, #item-box div.box:nth-child(6) p.desc {top: 82%;}
+#item-box div.box:last-child img.desc {width: 80%;position: absolute; left: 50%; bottom: 70px;;transform: translateX(-50%);}
+#item-box div.box div.info {display: flex; justify-content: center; align-items: center; position: absolute; top: 130px; left: 50%; transform: translateX(-50%);}
+#item-box div.box div.info .info-link +.info-link {margin-left: 30px;}
+#item-box div.box div.info .info-link {font-size: 14px;}
+#item-box div.box:nth-child(3) .info, #item-box div.box:nth-child(6) .info, #item-box div.box:last-child .info {top: 90%}
+@media screen and (max-width: 734px){
+	#holiday {height: 548px;}
+	#holiday h2 {font-size: 35px;}
+	#holiday img {height: 60px; width: 50px;}
+	#holiday p.info-link {top: 260px;}
+	#holiday ul.img-list {height: 280px; width: 100%; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);}
+	#holiday ul.img-list li {background-size: 40%;}
+	#holiday ul.img-list li:nth-child(2),#holiday ul.img-list li:last-child {display: none;}
+	#iphone13_pro {height: 548px;}
+	#iphone13 {height: 548px;}
+	#item-box div.box {width: 100%; height: 548px;}
+	#item-box div.box:nth-child(2) {background: url("../img/tile_macbookpro__small.jpg") center no-repeat; background-size: 713px 548px}
+	#item-box div.box:nth-child(3) {background: url("../img/tile_airpods.jpg") center 0px no-repeat; background-size: auto;}
+	#item-box div.box:nth-child(4) {background: url("../img/tile_watch__small.jpg") center no-repeat; background-size: 713px 548px}
+	#item-box div.box:nth-child(5) {background: url("../img/promo_ipad_mini__small.jpg") center no-repeat; background-size: 713px 548px}
+	#item-box div.box:nth-child(6) {background: url("../img/promo_ipad__small.jpg") center no-repeat; background-size: 713px 548px}
+	#item-box div.box:last-child {background: url("../img/tile_mariah__small.jpg") center no-repeat; background-size: 713px 548px}
+}
+
+/*Airpod page*/
 #main-tab {position: relative; width: 100%; height: 130px;}
 #main-tab > ul {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; text-align: center}
 #main-tab > ul > li {display: inline-block; width: calc(12.5% - 10px); position: relative; height: 130px}
@@ -162,7 +255,6 @@ div.col div.battery em {font-size: 35px; font-weight: 600; position: relative; t
 #compare > a {position: absolute; bottom: -20px; font-size: 15px;  width: 100%; text-align: center; color:var(--blue-color); font-weight: 500; transition: text-decoration 0.3s;}
 #compare > a:hover {text-decoration: underline;}
 
-#footer .wrapper {width: 90%; margin: 0 auto;}
 #footer ul.service {width: 100%; height: 700px; border-bottom: 1px solid var(--gray-border-color); box-sizing: border-box;}
 ul.service > li {float: left; width: calc(50% - 10px); position: relative; text-align: center; height: 50%;}
 ul.service > li:nth-child(2n) {margin-left: 20px;}
@@ -172,34 +264,11 @@ ul.service > li > a div.content img {display: block; position: absolute; top: 40
 ul.service > li > a div.content em {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;font-size: 16px; font-weight: 600; margin-top: 10px}
 ul.service > li > a div.content p {position: absolute; top: 58%; left: 50%; transform: translate(-50%, 0); font-size: 13px; font-weight: 400; width: 100%; line-height: 1.6;}
 ul.service > li > a div.content p.info-link {height: 20px; top: 300px;}
-
-div.notice {color: #6e6e73; font-size: 11px; border-bottom: 1px solid var(--gray-border-color); padding: 15px 0px; box-sizing: border-box;}
-div.notice p {margin-bottom: 10px;}
-div.notice ol {padding: 0px 10px;}
-div.notice ol li+li {margin-top: 10px;}
-
 div.site p {padding: 15px 0px; height: 50px; box-sizing: border-box; display: flex; align-items: center; justify-content: flex-start; border-bottom: 1px solid var(--gray-border-color);}
 div.site p > * {display: flex; flex-direction: column; align-items: center; font-size: 12px; margin-left: 10px; justify-content: space-between;}
 div.site p > * > i {font-size: 17px;}
 div.site p > a {position: relative; top: -1px;}
 div.site p > span i {color: #6e6e73;}
-div.site ul.site-wrapper {width: 100%; overflow: hidden; position: relative; color: #6e6e73; font-size: 11px;}
-div.site ul.site-wrapper > li {width: 100%; border-bottom: 1px solid var(--gray-border-color);}
-div.site ul.site-wrapper > li > a {display: block; font-weight: 600; width: 100%; position: relative; padding: 10px 0px; box-sizing: border-box;}
-div.site ul.site-wrapper > li > a > i {position: absolute; right: 5px; transition: transform 0.3s;}
-div.site ul.site-wrapper > li > ul {height: 0px; overflow: hidden;transition: height 0.3s; padding-left: 10px; box-sizing: border-box;}
-div.site ul.site-wrapper > li > ul > li:first-child {margin-top: 10px;}
-div.site ul.site-wrapper > li > ul > li {margin-bottom: 15px; transition: all 0.3s;}
-div.site ul.site-wrapper > li > ul > li:hover {text-decoration: underline;}
-div.site ul.site-wrapper > li.open > a > i {transform: rotate(45deg);}
-address {color: #6e6e73; font-size: 11px; margin: 20px 0px;}
-address > p {padding: 10px 0px; box-sizing: border-box;}
-address > p > a {color: var(--blue-color);}
-address div.info {display: flex; padding: 10px 0px; position: relative; flex-direction: column; justify-content: space-between; align-items: flex-start; bottom: -20px;}
-address div.info .notification {margin-top: 10px;}
-address div.info .notification span {padding-right: 10px; box-sizing: border-box;}
-address div.info .notification span + span {border-left: 1px solid var(--gray-border-color); padding-left: 10px;}
-address div.info p.nation {position: relative; top: -7.5em}
 
 @media screen and (max-width: 850px){
 	#items div h3 {font-size: 90px;}
