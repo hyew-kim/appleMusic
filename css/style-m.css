@@ -155,7 +155,7 @@ address div.info p.nation {position: relative; top: -6em;}
 	#item-box div.box:nth-child(5) {background: url("../img/promo_ipad_mini__small.jpg") center no-repeat; background-size: 713px 548px}
 	#item-box div.box:nth-child(6) {background: url("../img/promo_ipad__small.jpg") center no-repeat; background-size: 713px 548px}
 	#item-box div.box:last-child {background: url("../img/tile_mariah__small.jpg") center no-repeat; background-size: 713px 548px}
-	#item-box div.box:nth-child(3) h3, #item-box div.box:nth-child(6) h3 {position: relative; bottom: -65%}
+	#item-box div.box:nth-child(3) h3, #item-box div.box:nth-child(6) h3 {position: relative; bottom: -360px;}
 }
 
 /*Airpod page*/
