@@ -9,7 +9,6 @@ $(document).ready(function(){
 });
 
 $(window).on('resize', function(){
-  showBanner(bannerNow);
   if ($(this).width() >= 640)
     $('#main-tab ul').css({'left':'50%'});
   else
@@ -34,19 +33,6 @@ $('#header a.menu').on('click',function(){
   $('body').toggleClass('no-scroll');
 });
 
-var toalBanner = $('#connection ul.slide li').length;
-var bannerNow = 0;
-var bannerPrev = 0;
-var bannerNext = 0;
-var firstBanner = 0;
-
-showBanner(firstBanner);
-$('#connection ul.control li .prev').on('click',function(){
-  showBanner(bannerPrev);
-});
-$('#connection ul.control li .next').on('click',function(){
-  showBanner(bannerNext);
-});
 
 $('#main-tab div.control a:eq(0)').on('click',function(){
   moveMainTab(0);
@@ -71,31 +57,12 @@ $('div.site ul.site-wrapper > li').on('click', function(){
     $(this).removeClass('open');
   }
 });
-/*function */
 
+/*function */
 function preventDefaultAnchor() {
   $(document).on('click', 'a[href="#"]', function(event) {
     event.preventDefault();
   });
-}
-
-
-function showBanner(n) {
-  var offsetX = -$(`#connection ul.slide li:eq(${n})`).position().left;
-  if (n !== 0)
-     offsetX -= 30;
-  $('#connection ul.slide').css({'left': offsetX, 'transition':'left 1s'});
-  bannerNow = n;
-  bannerPrev = bannerNow === 0 ? 0 : n - 1;
-  bannerNext = bannerNow === toalBanner - 1 ? toalBanner -1 : n+ 1;
-  if (bannerNow === 0)
-    {
-      $("#connection ul.control li .prev").addClass('off');
-    }
-  else if (bannerNow === toalBanner - 1)
-    $("#connection ul.control li .next").addClass('off');
-  else
-    $("#connection ul.control li a").removeClass('off');
 }
 
 function moveMainTab (delX){
