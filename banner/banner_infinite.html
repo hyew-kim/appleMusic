@@ -346,7 +346,6 @@
 			$bar.css({'left': `${currentOffsetX}px`});
 			if (Math.abs(currentOffsetX) > contentWidth)
 			{
-				console.log(currentOffsetX, idx);
 				var $first = $bar.find('li:eq(0)');
 				$bar.append("<li>" + $first.html() + "</li>");
 				$first.remove();
